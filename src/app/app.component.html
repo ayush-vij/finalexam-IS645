@@ -1,0 +1,58 @@
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div class="jumbotron">
+  <div class="bg-info">
+
+    <h2>Final Exam</h2>
+    <p>Find all even numbers betweem two numbers</p>
+
+  </div>
+  <br>
+  <!-- <form action=""> -->
+
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <table>
+      <tr>
+        <td>Number 1:</td>
+        <td>Number 2:</td>
+      </tr>
+      <tr>
+        <td>
+          <!-- <input type="text" name="t1" id="t1" > -->
+          <input type="text" id="firstNumber" name="firstNumber" class="form-control" [(ngModel)]="model.firstNumber"
+            #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstNumber.invalid }" required>
+          <div *ngIf="f.submitted && firstNumber.invalid" class="invalid-feedback">
+            <div *ngIf="firstNumber.errors.required">First Number is required</div>
+          </div>
+        </td>
+
+        <td>
+          <!-- <input type="text" name="t2" id="t2"> -->
+          <input type="text" id="secondNumber" name="secondNumber" class="form-control" [(ngModel)]="model.secondNumber"
+            #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && secondNumber.invalid }" required>
+          <div *ngIf="f.submitted && secondNumber.invalid" class="invalid-feedback">
+            <div *ngIf="secondNumber.errors.required">Second Number is required</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><br><button class="btn-primary-warning" id="btn">Submit</button></td>
+      </tr>
+      <tr>
+        <td>
+          <p></p>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <div>
+    <h2>Calculation Result:</h2>
+    <div class="res">
+      <p class="line1">{{ Message1 }}</p>
+      <p class="line2"></p>
+    </div>
+  </div>
+
+</div>

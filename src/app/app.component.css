@@ -1,0 +1,30 @@
+.text-danger{
+    color: red;
+}
+
+.text-light{
+    color: white;
+}
+
+.text-success{
+    color: green;
+}
+
+.btn-primary-warning{
+    border-color: yellow;
+    background-color: white;
+}
+.bg-info{
+    background-color: aqua;
+}
+
+.res{
+    border: 10px;
+}
+
+.line1{
+    color: red;
+}
+.line2{
+    color: red;
+}
