@@ -20,21 +20,20 @@
       </tr>
       <tr>
         <td>
-          <!-- <input type="text" name="t1" id="t1" >
+          <!-- <input type="text" name="t1" id="t1" > -->
           <input type="text" id="firstNumber" name="firstNumber" class="form-control" [(ngModel)]="model.firstNumber"
             #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstNumber.invalid }" required>
           <div *ngIf="f.submitted && firstNumber.invalid" class="invalid-feedback">
             <div *ngIf="firstNumber.errors.required">Input is not a valid number</div>
-          </div> -->
+          </div>
         </td>
 
         <td>
-          <!-- <input type="text" name="t2" id="t2">
           <input type="text" id="secondNumber" name="secondNumber" class="form-control" [(ngModel)]="model.secondNumber"
             #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && secondNumber.invalid }" required>
           <div *ngIf="f.submitted && secondNumber.invalid" class="invalid-feedback">
             <div *ngIf="secondNumber.errors.required">Input is not a valid number</div>
-          </div> -->
+          </div>
         </td>
       </tr>
       <tr>
@@ -49,7 +48,7 @@
   </form>
   <div>
     <h2>Calculation Result:</h2>
-    <div class="res">
+    <textarea class="form-control" row=3>
       <p class="line1"></p>
       <p class="line2"></p>
     </div>
